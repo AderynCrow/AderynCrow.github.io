@@ -1,1 +1,89 @@
-hello world
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<style>
+  .parent {
+    display: flex;
+  }
+
+  .left {
+    flex: 1;
+    /* Grow to rest of container */
+    padding: 20px;
+  }
+
+  .right {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .rightTrapez,
+  .leftTrapez {}
+
+  .rightTrapez img,
+  .leftTrapez img {}
+
+  .rightTrapez img {
+    -webkit-clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+  }
+
+  .rightTrapez h1 {}
+
+  .leftTrapez img {
+    -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+    margin-left: auto;
+    margin-right: 0;
+  }
+</style>
+
+<body class="bg-rosePine-base">
+  <h1 class="text-3xl font-bold underline text-rosePineDawn-love">
+    Hello world!
+  </h1>
+
+
+
+  <div class="parent bg-rosePine-surface rightTrapez">
+    <div class="left">
+      <img src="./XeniaSunset.png" alt="xenia">
+    </div>
+    <div class="right">
+      <h1 class="text-rosePine-text text-3xl" style="text-align: center;">Text</h1>
+      <p class="text-rosePine-rose" style="text-align: center;">lorem ipsum</p>
+      <button class="bg-rosePine-love hover:bg-rosePine-rose text-rosePine-text font-bold py-2 px-4 rounded">
+        Button
+      </button>
+      
+    </div>
+  </div>
+
+
+  <div class="parent leftTrapez">
+    <div class="left">
+      <h1 class="text-rosePine-text text-3xl" style="text-align: center;">Text</h1>
+    </div>
+    <div class="right">
+      <img src="./XeniaSunset.png" alt="xenia">
+    </div>
+  </div>
+
+  <div class="parent bg-rosePine-surface rightTrapez">
+    <div class="left">
+      <img src="./XeniaSunset.png" alt="xenia">
+    </div>
+    <div class="right">
+      <h1 class="text-rosePine-text text-3xl" style="text-align: center;">Text</h1>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
